@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Readmission — Power BI Dashboard | Pavishya Janakiraman</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html"><span class="nav__logo">PJ</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="gallery-header">
+    <div class="gallery-header__back">
+      <a href="index.html#projects" class="btn btn--ghost btn--small">← Back to Portfolio</a>
+    </div>
+    <h1>Hospital Readmission Risk — Power BI Dashboard</h1>
+    <p>
+      A 3-page executive dashboard built on the UCI Diabetes 130-US Hospitals dataset
+      (101,766 admissions), surfacing readmission risk by patient demographics, diagnosis,
+      and treatment factors.
+    </p>
+  </header>
+
+  <!-- ── GALLERY ── -->
+  <section class="section">
+    <div class="container gallery__list">
+
+      <div class="project-card">
+        <img src="assets/images/powerbi/page-1-executive-summary.png" alt="Power BI Executive Summary dashboard page showing readmission rate, average length of stay, and high-risk patient KPIs" class="project-card__image" />
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Page 1</span>
+          <h3 class="project-card__title">Executive Summary</h3>
+        </div>
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>KPI cards: 30-day readmission rate, average length of stay, high-risk patient count</li>
+            <li>Readmission rate by age group — risk climbs sharply after age 20, then stays elevated</li>
+            <li>Admissions by diagnosis category, highlighting Circulatory and Diabetes as top volume drivers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/powerbi/page-2-patient-risk-heatmap.png" alt="Power BI heatmap showing readmission rate by age group and diagnosis category" class="project-card__image" />
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Page 2</span>
+          <h3 class="project-card__title">Patient Risk Heatmap</h3>
+        </div>
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Readmission rate by age group × diagnosis category, built for drill-through to patient detail</li>
+            <li>Designed to flag the specific age/diagnosis combinations clinical teams should prioritise</li>
+            <li>Older age groups with Circulatory or Diabetes diagnoses consistently run highest risk</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/powerbi/page-3-clinical-trends.png" alt="Power BI dashboard showing readmission rate by A1C result, insulin status, and medication count" class="project-card__image" />
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Page 3</span>
+          <h3 class="project-card__title">Clinical Trends</h3>
+        </div>
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>A1C impact: untested patients show the highest readmission rate of any group</li>
+            <li>Insulin dose changes ("Up"/"Down") correlate with higher readmission than steady dosing</li>
+            <li>Medication count trends upward with readmission rate, even past ~15 prescribed medications</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2024 Pavishya Janakiraman &nbsp;·&nbsp; Built with HTML/CSS/JS &nbsp;·&nbsp; Hosted on Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
