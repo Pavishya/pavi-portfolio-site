@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital Readmission — Power BI Dashboard | Pavishya Janakiraman</title>
+  <title>Hospital Data Analysis &amp; Insights — Tableau Dashboards | Pavishya Janakiraman</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -31,11 +31,12 @@
     <div class="gallery-header__back">
       <a href="index.html#projects" class="btn btn--ghost btn--small">← Back to Portfolio</a>
     </div>
-    <h1>Hospital Readmission Risk — Power BI Dashboard</h1>
+    <h1>Hospital Data Analysis &amp; Insights — Tableau Dashboards</h1>
     <p>
-      A 3-page executive dashboard built on the UCI Diabetes 130-US Hospitals dataset
-      (101,766 admissions), surfacing readmission risk by patient demographics, diagnosis,
-      and treatment factors.
+      A multi-dashboard Tableau analysis of hospital Quality Data and Readmission Registry datasets,
+      built to surface insights across provider specialties, length of stay, readmissions, ED throughput,
+      mortality, ambulatory care, and blood pressure control — supporting data-driven improvements in
+      patient care and operational efficiency.
     </p>
   </header>
 
@@ -44,50 +45,125 @@
     <div class="container gallery__list">
 
       <div class="project-card">
-        <img src="assets/images/powerbi/page-1-executive-summary.png" alt="Power BI Executive Summary dashboard page showing readmission rate, average length of stay, and high-risk patient KPIs" class="project-card__image" />
         <div class="project-card__header">
-          <span class="project-card__domain domain--health">Page 1</span>
-          <h3 class="project-card__title">Executive Summary</h3>
+          <span class="project-card__domain domain--health">Dashboard 1</span>
+          <h3 class="project-card__title">Provider Specialty Overview</h3>
         </div>
+        <img src="assets/images/tableau/provider-specialty.png" alt="Tableau dashboard showing provider specialty distribution via funnel chart, bar chart, donut chart, and packed bubble chart by visit year" class="project-card__image" />
         <div class="project-card__body">
           <ul class="project-card__bullets">
-            <li>KPI cards: 30-day readmission rate, average length of stay, high-risk patient count</li>
-            <li>Readmission rate by age group — risk climbs sharply after age 20, then stays elevated</li>
-            <li>Admissions by diagnosis category, highlighting Circulatory and Diabetes as top volume drivers</li>
+            <li>Funnel chart ranks provider specialties by headcount — Primary Care leads with 16 providers, followed by Pediatrics, Cardiology, and Surgery</li>
+            <li>Donut chart breaks down 945 total patient visits by specialty, with Primary Care (194) and Pediatrics (177) driving the highest volume</li>
+            <li>Packed bubble chart traces patient visits by year, highlighting 1993 and 1997 as peak years with 100 and 96 visits respectively</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="assets/images/powerbi/page-2-patient-risk-heatmap.png" alt="Power BI heatmap showing readmission rate by age group and diagnosis category" class="project-card__image" />
         <div class="project-card__header">
-          <span class="project-card__domain domain--health">Page 2</span>
-          <h3 class="project-card__title">Patient Risk Heatmap</h3>
+          <span class="project-card__domain domain--health">Dashboard 2</span>
+          <h3 class="project-card__title">Length of Stay (LOS) Analysis</h3>
         </div>
+        <img src="assets/images/tableau/length-of-stay.png" alt="Tableau dashboard showing length of stay by primary diagnosis, discharge disposition, and weekly trend" class="project-card__image" />
         <div class="project-card__body">
           <ul class="project-card__bullets">
-            <li>Readmission rate by age group × diagnosis category, built for drill-through to patient detail</li>
-            <li>Designed to flag the specific age/diagnosis combinations clinical teams should prioritise</li>
-            <li>Older age groups with Circulatory or Diabetes diagnoses consistently run highest risk</li>
+            <li>Treemap of primary diagnosis shows Pneumonia (177 days) and Heart Failure (78 days) as the largest contributors to total length of stay</li>
+            <li>577 patients were discharged home versus 104 who expired and 39 transferred, segmenting LOS by discharge disposition</li>
+            <li>Average length of stay trended upward from 7.1 days in Week 2 to a peak of 14.0 days in Week 9, alongside rising discharge counts</li>
           </ul>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="assets/images/powerbi/page-3-clinical-trends.png" alt="Power BI dashboard showing readmission rate by A1C result, insulin status, and medication count" class="project-card__image" />
         <div class="project-card__header">
-          <span class="project-card__domain domain--health">Page 3</span>
-          <h3 class="project-card__title">Clinical Trends</h3>
+          <span class="project-card__domain domain--health">Dashboard 3</span>
+          <h3 class="project-card__title">Readmission Analysis Trend</h3>
         </div>
+        <img src="assets/images/tableau/readmission-analysis.png" alt="Tableau dashboard showing readmission rate trend, readmission by primary diagnosis, and readmission by demographics" class="project-card__image" />
         <div class="project-card__body">
           <ul class="project-card__bullets">
-            <li>A1C impact: untested patients show the highest readmission rate of any group</li>
-            <li>Insulin dose changes ("Up"/"Down") correlate with higher readmission than steady dosing</li>
-            <li>Medication count trends upward with readmission rate, even past ~15 prescribed medications</li>
+            <li>Overall readmission KPI of 26.94%, with weekly rates ranging from a high of 45.92% in Week 1 to a low of 12.20% in Week 6</li>
+            <li>Stroke (76.47%) and Heart Failure (57.69%) post the highest readmission rates among primary diagnoses</li>
+            <li>Demographic breakdown highlights elevated readmission among Spanish-speaking and Black/African-American patient groups, informing targeted follow-up care</li>
           </ul>
         </div>
       </div>
 
+      <div class="project-card">
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Dashboard 4</span>
+          <h3 class="project-card__title">Emergency Department (ED) Throughput</h3>
+        </div>
+        <img src="assets/images/tableau/ed-throughput.png" alt="Tableau dashboard showing emergency department throughput trend by acuity, visit date, and reason for visit" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Average ED throughput of 11.67 hours from patient arrival to discharge — a key driver of patient satisfaction</li>
+            <li>Throughput climbs with acuity level, peaking at 12.11 hours for the highest-acuity patients</li>
+            <li>Chest Pain (308 visits) and Shortness of Breath (149 visits) are the leading reasons for ED visits, each with throughput above the overall average</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Dashboard 5</span>
+          <h3 class="project-card__title">Mortality Analysis</h3>
+        </div>
+        <img src="assets/images/tableau/mortality-analysis.png" alt="Tableau dashboard showing mortality index, mortality by discharge date, diagnosis, and demographics" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Mortality index of 42.73%, comparing actual deaths against expected deaths within the observation period</li>
+            <li>Heart Failure and Flu account for the highest observed mortality by diagnosis</li>
+            <li>Mortality trended highest in January (94.45 expected vs. observed deaths), tapering by March, with demographic splits surfacing disparities by race and gender</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Dashboard 6</span>
+          <h3 class="project-card__title">Ambulatory Care Snapshot</h3>
+        </div>
+        <img src="assets/images/tableau/ambulatory-visit.png" alt="Tableau dashboard showing ambulatory visit analysis including no-show rate, wait time trend, and visit type breakdown" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>320 new visits out of 736 total completed, with an average no-show rate of 16.21% and average wait time of 15.60 days</li>
+            <li>No-show rate fluctuates sharply week to week, spiking to 40.63% before dropping to 0% — pointing to scheduling and outreach opportunities</li>
+            <li>Follow-up visits (266) outpace new (120), physical (155), and telemedicine (195) visit types in total completed volume</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <span class="project-card__domain domain--health">Dashboard 7</span>
+          <h3 class="project-card__title">Blood Pressure (BP) Control Trend</h3>
+        </div>
+        <img src="assets/images/tableau/bp-control-trend.png" alt="Tableau dashboard showing blood pressure control trend, BP by demographics, and BP by visit type" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Overall BP control KPI of 41.47%, tracked weekly against a target of under 120/80 mm Hg</li>
+            <li>Control rates vary widely by demographic group, from 45% to 100%, with Black/African-American female patients showing the strongest control</li>
+            <li>New patient visits (56%) show the highest share of BP readings, ahead of Follow-Up (40%), Physical (40%), and Telemedicine (38%) visit types</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── METHODOLOGY ── -->
+  <section class="section">
+    <div class="container">
+      <h2>Approach</h2>
+      <p>
+        This analysis followed a three-phase framework: <strong>Tableau</strong> for initial data exploration,
+        chart building, table joins, and date/null-value handling; <strong>Python</strong> (NumPy, Pandas,
+        Matplotlib, Seaborn) for deeper exploratory analysis, pair plots, ICU length-of-stay and mortality
+        investigation, and patient demographic stratification; and <strong>SQL</strong> for data validation,
+        integrity checks, ERD-based database design, and automated triggers — confirming findings across all
+        three tools before drawing conclusions.
+      </p>
     </div>
   </section>
 
