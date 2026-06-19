@@ -291,6 +291,20 @@ ul { list-style: none; }
   color: var(--text-muted);
   font-weight: 500;
 }
+.badges {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.badges__item {
+  width: 120px;
+  height: auto;
+  transition: transform var(--transition);
+}
+.badges__item:hover { transform: translateY(-4px); }
 
 /* ── SKILLS ── */
 .skills__grid {
