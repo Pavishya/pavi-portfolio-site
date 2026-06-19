@@ -440,6 +440,79 @@ ul { list-style: none; }
   display: block;
 }
 
+/* ── BLOG ── */
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.blog-card__body { padding: 28px; }
+.blog-card__meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.blog-card__title { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; line-height: 1.35; }
+.blog-card__excerpt { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.article h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 40px 0 16px;
+}
+.article h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: var(--accent-soft);
+}
+.article p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.article ul, .article ol {
+  margin: 0 0 16px 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.article ul { list-style: disc; }
+.article ol { list-style: decimal; }
+.article strong { color: var(--text); }
+.article code {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.article figure { margin: 24px 0; }
+.article img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+.article figcaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+.article__refs a {
+  color: var(--accent-soft);
+  word-break: break-all;
+  text-decoration: underline;
+}
+
 /* ── CONTACT ── */
 .contact__inner { text-align: center; }
 .contact__text {
@@ -507,6 +580,7 @@ ul { list-style: none; }
   .skills__grid { grid-template-columns: 1fr; }
 
   .projects__grid { grid-template-columns: 1fr; }
+  .blog__grid { grid-template-columns: 1fr; }
 
   .section { padding: 64px 0; }
   .section__title { font-size: 1.6rem; margin-bottom: 40px; }

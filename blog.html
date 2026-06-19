@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Pavishya Janakiraman</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html"><span class="nav__logo">PJ</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="gallery-header">
+    <div class="gallery-header__back">
+      <a href="index.html" class="btn btn--ghost btn--small">← Back to Portfolio</a>
+    </div>
+    <h1>Blog</h1>
+    <p>
+      Notes on Tableau, data analysis, and the practical techniques I use day to day —
+      written for analysts who want the how, not just the theory.
+    </p>
+  </header>
+
+  <!-- ── BLOG GRID ── -->
+  <section class="section">
+    <div class="container blog__grid">
+
+      <a href="blog-actions-in-tableau.html" class="project-card blog-card">
+        <img src="assets/images/blog/tableau-url-action.png" alt="Tableau URL action menu showing a dynamic link generated from a selected mark" class="project-card__image" />
+        <div class="blog-card__body">
+          <div class="blog-card__meta">Tableau</div>
+          <h3 class="blog-card__title">Actions in Tableau</h3>
+          <p class="blog-card__excerpt">
+            A walkthrough of all six Tableau action types — URL, Go to Sheet, Filter, Highlight,
+            Set, and Parameter actions — with step-by-step setup for each.
+          </p>
+          <span class="btn btn--small btn--secondary">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="blog-managing-outliers.html" class="project-card blog-card">
+        <img src="assets/images/blog/outliers-boxplot.png" alt="Box and whisker plot showing quartile ranges used to identify outliers" class="project-card__image" />
+        <div class="blog-card__body">
+          <div class="blog-card__meta">Data Analysis</div>
+          <h3 class="blog-card__title">How to Identify and Manage Outliers in Data</h3>
+          <p class="blog-card__excerpt">
+            Four practical methods for spotting outliers — sorting, visualization, Z-score, and
+            IQR — plus when to remove them versus leave them as natural variation.
+          </p>
+          <span class="btn btn--small btn--secondary">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2024 Pavishya Janakiraman &nbsp;·&nbsp; Built with HTML/CSS/JS &nbsp;·&nbsp; Hosted on Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

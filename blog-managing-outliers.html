@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Identify and Manage Outliers in Data | Blog | Pavishya Janakiraman</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html"><span class="nav__logo">PJ</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="gallery-header">
+    <div class="gallery-header__back">
+      <a href="blog.html" class="btn btn--ghost btn--small">← Back to Blog</a>
+    </div>
+    <h1>How to Identify and Manage Outliers in Data</h1>
+    <p>Four practical detection methods, and how to decide what to do once you've found one.</p>
+  </header>
+
+  <!-- ── ARTICLE ── -->
+  <section class="section">
+    <div class="container article">
+
+      <h2>What Are Outliers?</h2>
+      <p>
+        Outliers are extreme values that differ from most of the other values in a dataset.
+        They have a high impact on data analysis — they can give useful insights into a
+        dataset and a better understanding of the analysis, and with outliers we can detect
+        data inconsistencies. They can occur due to a measurement error or a highly skewed
+        distribution. Because they're more variable than the rest of the observations, they
+        may result in wrong conclusions if not handled properly.
+      </p>
+
+      <h2>When to Remove Outliers</h2>
+      <p>
+        It's advisable to remove outliers only when there is a strong reason to do so. Some
+        outliers represent natural variations and should be left as-is in your dataset — these
+        are called <strong>true outliers</strong>. Others are problematic and should be removed
+        because they represent measurement errors, data entry errors, or processing errors —
+        these have a huge impact on overall results. In a small sample size, a single outlier
+        can have an outsized impact on the results.
+      </p>
+
+      <h2>How to Identify Outliers</h2>
+      <p>We can identify outliers using one of four methods:</p>
+      <ol>
+        <li>Sorting method</li>
+        <li>Data visualization</li>
+        <li>Z-score method</li>
+        <li>Interquartile range (IQR) method</li>
+      </ol>
+
+      <h3>1. Sorting</h3>
+      <p>
+        This is the simplest way to identify an outlier. Sort the data from low to high and
+        eyeball the extreme low and high values. For a small range of data, you can sort
+        manually; for a larger dataset, Excel works well.
+      </p>
+      <p><strong>Example:</strong></p>
+      <p><code>57, 100, 20, 150, 50, 200, 139, 45, 275, 80, 3</code></p>
+      <p>Sorted: <code>3, 20, 45, 50, 57, 80, 100, 139, 150, 200, 275</code></p>
+      <p>Here, 3, 20, and 275 stand out as the outliers.</p>
+      <p>
+        To sort in Excel: highlight the data you wish to sort, then select
+        <strong>Data &gt; Sort &amp; Filter</strong>. Choose to sort smallest to largest or
+        largest to smallest — this helps identify the outliers at a glance.
+      </p>
+      <p>
+        Instead of sorting, you can identify the largest and smallest value directly with the
+        <code>LARGE</code> and <code>SMALL</code> functions — though each only returns a single
+        value, so for multiple outliers you'll need to call the function repeatedly:
+      </p>
+      <p>
+        <code>=SMALL(A2:A11,1)</code> — identifies the 1st smallest value<br />
+        <code>=SMALL(A2:A11,2)</code> — identifies the 2nd smallest value, and so on. The same
+        syntax applies to <code>LARGE</code>.
+      </p>
+
+      <h3>2. Data Visualization</h3>
+      <p>
+        The next most popular method for spotting outliers is visualization — using a scatter
+        plot, box-and-whisker plot, or histogram.
+      </p>
+
+      <p><strong>Box and Whisker Plot:</strong></p>
+      <p>
+        Very helpful for comparing the distribution of different groups in a dataset. It
+        presents ranges of values based on quartiles using boxes and lines, and displays
+        outliers directly. A box plot helps identify five data points: the smallest number
+        (minimum), the first quartile (25% mark), the median, the third quartile (75% mark),
+        and the largest number (maximum).
+      </p>
+
+      <figure>
+        <img src="assets/images/blog/outliers-boxplot.png" alt="Box and whisker plot showing upper whisker, upper hinge, median, lower hinge, and lower whisker values" />
+        <figcaption>A box-and-whisker plot surfaces the five-number summary — minimum, Q1, median, Q3, and maximum — at a glance.</figcaption>
+      </figure>
+
+      <p><strong>Histogram:</strong></p>
+      <p>
+        Histograms group data into bins. Most of the data will be concentrated on one side of
+        the graph, leaving a bin on the other side — helping you spot extreme outliers at a
+        glance.
+      </p>
+
+      <p><strong>Scatter Plot:</strong></p>
+      <p>
+        A scatter plot generally follows a pattern, like a straight line or curve, for a given
+        set of data. Values that don't fall in that pattern and sit outside the cluster are the
+        outliers.
+      </p>
+
+      <h3>3. Z-Score Method</h3>
+      <p>
+        This method identifies outliers by determining how far a value is from the mean. The
+        Z-score tells you how many standard deviations a value is from the mean.
+      </p>
+      <p><code>Z-score = (x - mean) / standard deviation</code></p>
+      <p>
+        If the Z-score is greater than 3, the value is very far from the mean and can be
+        treated as an outlier — the farther a value is from the mean, the more extreme the
+        outlier. This method works well for normally distributed (or similar) data, but isn't
+        effective for skewed data.
+      </p>
+
+      <h3>4. Interquartile Range (IQR) Method</h3>
+      <p>
+        A robust method for skewed data. This method calculates the IQR of the data, then the
+        upper and lower bounds — any data points beyond those bounds are identified as
+        outliers.
+      </p>
+      <p><strong>How to calculate:</strong></p>
+      <p>
+        First, sort the data in ascending order, then calculate Q1 (first quartile) and Q3
+        (third quartile) — Excel's <code>QUARTILE</code> function makes this easy:
+      </p>
+      <p>
+        <code>=QUARTILE(Datarange, 1)</code> — calculates the first quartile<br />
+        <code>=QUARTILE(Datarange, 3)</code> — calculates the third quartile
+      </p>
+      <p>
+        <code>IQR = Q3 - Q1</code><br />
+        <code>Upper bound = Q3 + (1.5 × IQR)</code><br />
+        <code>Lower bound = Q1 - (1.5 × IQR)</code>
+      </p>
+
+      <h2>How to Handle the Outliers</h2>
+      <p>
+        Once you've identified outliers, you need to decide how to handle them. You can choose
+        to remove the data (trimming the outliers), impute it with the mean, median, or mode,
+        or cap/floor the data when values fall beyond the boundary values.
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>
+        Outliers play a key role in data analysis, so it's important to use efficient detection
+        techniques and handle them once identified — they can skew results and impact insights
+        when not addressed properly. Managing them effectively leads to more meaningful
+        insights and better decision-making.
+      </p>
+
+      <h2>References</h2>
+      <ul class="article__refs">
+        <li><a href="https://www.freecodecamp.org/news/what-is-an-outlier-definition-and-how-to-find-outliers-in-statistics/" target="_blank" rel="noopener">freecodecamp.org — What is an Outlier?</a></li>
+        <li><a href="https://www.scribbr.com/statistics/outliers/" target="_blank" rel="noopener">scribbr.com — Outliers</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2024 Pavishya Janakiraman &nbsp;·&nbsp; Built with HTML/CSS/JS &nbsp;·&nbsp; Hosted on Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

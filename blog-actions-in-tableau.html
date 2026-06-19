@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actions in Tableau | Blog | Pavishya Janakiraman</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html"><span class="nav__logo">PJ</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="gallery-header">
+    <div class="gallery-header__back">
+      <a href="blog.html" class="btn btn--ghost btn--small">← Back to Blog</a>
+    </div>
+    <h1>Actions in Tableau</h1>
+    <p>How to turn static dashboards into interactive, click-driven experiences.</p>
+  </header>
+
+  <!-- ── ARTICLE ── -->
+  <section class="section">
+    <div class="container article">
+
+      <p>
+        "Actions" are interactive features that allow users to dynamically filter, highlight,
+        or navigate between different views within a dashboard by clicking on specific marks
+        on a chart — essentially creating a more engaging and interactive experience for data
+        analysis. Actions add an interactive element to dashboards and let the user build
+        customized views on the fly.
+      </p>
+
+      <h2>Why We Need Actions</h2>
+      <p>
+        In Tableau, actions are crucial because they allow users to interact dynamically with
+        visualizations on a dashboard, enabling them to explore data more deeply — ultimately
+        creating a more engaging and insightful user experience.
+      </p>
+
+      <h2>Types of Actions</h2>
+      <ul>
+        <li><strong>Go to URL:</strong> Create hyperlinks to external resources, such as a web page or file</li>
+        <li><strong>Go to Sheet:</strong> Simplify navigation to other worksheets, dashboards, or stories in the same workbook</li>
+        <li><strong>Filter:</strong> Use the data from one view to filter data in another</li>
+        <li><strong>Highlight:</strong> Call attention to marks of interest by dimming all others</li>
+        <li><strong>Change Parameter:</strong> Let users change parameter values by directly interacting with marks</li>
+        <li><strong>Change Set Values:</strong> Let users change the values in a set by directly interacting with marks</li>
+      </ul>
+
+      <h2>1. Go to URL</h2>
+      <p>
+        A URL action is a hyperlink that points to a web page, file, or other web-based
+        resource outside of Tableau. When you set up a URL action, you can specify an external
+        URL to be opened when a user clicks on a specific part of the visualization, such as a
+        mark, field, or dashboard element. A URL action builds on this and allows your end
+        users to control what is shown on the web page by passing a value into the URL link
+        when the user interacts with a chart.
+      </p>
+
+      <h3>How to Create a URL Action in Tableau</h3>
+      <p>
+        Open the worksheet or dashboard where you want to create the action and select
+        <strong>Dashboard &gt; Actions</strong>. Click <strong>Add Action</strong> and choose
+        <strong>URL</strong>. Give the action a name and select the source sheet from the
+        dropdown, then choose the trigger type — here, <strong>Menu</strong>. Enter the
+        required URL link, then add dynamic fields to the URL by inserting a value such as
+        <code>&lt;sub-category&gt;</code> from the insert menu, so the link changes based on
+        what the user clicks.
+      </p>
+
+      <figure>
+        <img src="assets/images/blog/tableau-url-action.png" alt="Tableau menu showing a dynamic URL action generated from selecting the Phones mark" />
+        <figcaption>Selecting a mark surfaces a dynamic link — clicking it opens the corresponding Wikipedia page for that sub-category.</figcaption>
+      </figure>
+
+      <p>
+        Once the link is clicked, it automatically takes us to the required Wikipedia page —
+        adding more context to the visualization and making it more interactive. In this case,
+        selecting "Phones" takes us to the corresponding Wikipedia page.
+      </p>
+      <p>
+        URL actions can also be used to send an email. For this, the URL link is given as:
+      </p>
+      <p><code>mailto:recipient@email.com?subject=Estimated Waiting Time&amp;body=&lt;EmailAlert&gt;</code></p>
+      <p>
+        You specify the recipient in <code>mailto:</code> and give a subject and body for the
+        email. The body can be elaborate, so it's generally given as a user-defined calculated
+        field — in this case, <code>&lt;EmailAlert&gt;</code>.
+      </p>
+
+      <h2>2. Go to Sheet Action</h2>
+      <p>
+        This action helps jump from one worksheet to another. With a source sheet (e.g.
+        Sales Insights) and a target sheet (e.g. Profit Insights), click
+        <strong>Worksheet &gt; Actions &gt; Add Action &gt; Go to Sheet</strong>. Name the
+        action — for example, "Go To Profit Insights" — select the trigger type
+        (<strong>Menu</strong>), then choose the source and target sheet and click OK.
+      </p>
+      <p>
+        Once created, clicking on a mark surfaces a link with the action's name. Selecting it
+        takes the user straight to the target sheet.
+      </p>
+
+      <h2>3. Filter Action</h2>
+      <p>
+        Selecting data in one sheet filters data in another. The information selected in the
+        source sheet is displayed in the target sheet.
+      </p>
+      <p>
+        Click <strong>Worksheet &gt; Actions &gt; Add Action &gt; Filter</strong>. Name the
+        action, select the trigger type, then choose the source and target sheet. The
+        <strong>"Clearing the selection will"</strong> menu offers three options for how the
+        target sheet should behave after deselecting fields in the source — keep filtered
+        values, show all values, or exclude all values.
+      </p>
+
+      <figure>
+        <img src="assets/images/blog/tableau-filter-action.png" alt="Edit Filter Action dialog in Tableau showing source and target sheet configuration" />
+        <figcaption>Configuring a filter action: source sheet, target sheet, trigger, and clear-selection behavior.</figcaption>
+      </figure>
+
+      <p>
+        For example, selecting the subcategories Machines, Accessories, Copiers, and Bookcases
+        in the sales source sheet filters the profits target sheet to show only those
+        categories.
+      </p>
+
+      <h2>4. Highlight Action</h2>
+      <p>
+        Selecting data from one sheet highlights related data in another. It allows users to
+        call out specific data points or marks across visualizations when they interact with
+        an element. When a user selects or hovers over a mark in one visualization, related
+        marks in other views can be highlighted, making relationships between data points
+        easier to see.
+      </p>
+
+      <figure>
+        <img src="assets/images/blog/tableau-parameter-action.png" alt="Tableau highlighter menu showing options to highlight by all fields or a specific field like Sub-Category" />
+        <figcaption>Highlight actions can be configured via the pencil icon, or through Analysis &gt; Highlighters &gt; Sub-Category.</figcaption>
+      </figure>
+
+      <p>
+        For example, hovering on the "Phones" subcategory in the source sheet highlights the
+        target sheet with the profit insights for phones. Highlight actions can be created two
+        ways: clicking the pencil icon and choosing the required option, or via
+        <strong>Analysis &gt; Highlighters &gt; Sub-Category</strong>.
+      </p>
+
+      <h2>5. Set Action</h2>
+      <p>
+        Set actions are a powerful way to interactively modify a set based on user input, such
+        as a selection or hover. A set is a custom grouping of data based on certain conditions
+        or logic, used to isolate specific data points. Sets split data into two groups — an
+        "in" group and an "out" group — and users can change the values in the set by directly
+        interacting with the data.
+      </p>
+      <p>
+        To create a set, add Sales to Columns, Profit to Rows, and Customer ID to Detail. Then
+        right-click any data point and select <strong>Create Set</strong> — two sets are
+        created, which you can color as needed. To build the action: go to
+        <strong>Worksheet &gt; Actions &gt; Add Action &gt; Change Set Values</strong>, name
+        the action, and select the trigger, source sheet, and target set. The
+        "Run action on" menu defines whether selected data points are added to or removed from
+        the set, and the "Clearing the selection" menu defines what happens when the selection
+        is cleared.
+      </p>
+
+      <h2>6. Parameter Action</h2>
+      <p>
+        A parameter action allows users to interactively control the value of a parameter by
+        selecting elements within the view — marks, fields, or dashboard objects. Parameter
+        actions enable dynamic updates to a dashboard, enhancing interactivity and user
+        experience.
+      </p>
+      <p>
+        For example, a visualization shows sales distribution across months. Based on the
+        months a user selects, a "Total Sales" label updates dynamically. To build this: create
+        a parameter named Total Sales, then a calculated field (e.g. Total Final Sales) that
+        holds the parameter's value and can be used as a label on another sheet. Add both the
+        source sheet and the label sheet to the dashboard, then create the action via
+        <strong>Worksheet &gt; Action &gt; Add Action &gt; Change Parameter</strong> — name the
+        action and select the source sheet, target parameter, source field, and aggregation.
+        The label sheet then updates its total based on the months selected.
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>
+        Actions in Tableau enhance the user experience, making dashboards interactive and
+        insightful by enabling users to drill down into data, filter specific information, and
+        explore different perspectives. Used effectively, they create a more engaging,
+        user-friendly, and informative experience that supports deeper data analysis and
+        better decision-making.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2024 Pavishya Janakiraman &nbsp;·&nbsp; Built with HTML/CSS/JS &nbsp;·&nbsp; Hosted on Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
