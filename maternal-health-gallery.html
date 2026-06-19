@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maternal Fat Ultrasound &amp; Gestational Outcomes — Power BI Dashboards | Pavishya Janakiraman</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html"><span class="nav__logo">PJ</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="gallery-header">
+    <div class="gallery-header__back">
+      <a href="index.html#projects" class="btn btn--ghost btn--small">← Back to Portfolio</a>
+    </div>
+    <h1>Maternal Fat Ultrasound &amp; Gestational Outcomes — Power BI Dashboards</h1>
+    <p>
+      A 7-dashboard Power BI analysis of 272 pregnancy cases from the PhysioNet maternal
+      ultrasound and nutrition cohort, examining how maternal fat, demographics, lifestyle,
+      lab values, and pregnancy history relate to gestational complications and newborn outcomes.
+    </p>
+  </header>
+
+  <!-- ── GALLERY ── -->
+  <section class="section">
+    <div class="container gallery__list">
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Demographics Analysis</h3>
+        </div>
+        <img src="assets/images/maternal-health/demographics-analysis.png" alt="Power BI dashboard showing patient demographics, BMI status shift, ethnicity distribution, and birth weight outcomes" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>272 patients tracked, 211 with follow-up (61 lost to follow-up) — average age 26.08, obesity rate 26.47%</li>
+            <li>BMI status shifted in 19.23% of patients from Normal to Overweight and 8.14% from Normal to Obese between pre-pregnancy and current measurement</li>
+            <li>Ethnicity skews White (51.84%) and Black (29.04%); the 18–25 age group shows the highest prevalence of overweight/obese BMI, correlating with elevated pre-eclampsia risk</li>
+            <li>Younger mothers (18–25) trend toward normal birth weight, while higher maternal BMI shifts outcomes toward low birth weight or macrosomia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Dietary Habits and Hospital Outcomes Analysis</h3>
+        </div>
+        <img src="assets/images/maternal-health/dietary-hospital-outcomes.png" alt="Power BI dashboard showing dietary habits, gestational diabetes cases, and maternal health pathways" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>192 patients eat 3 meals daily, 59.9% eat fruit/veg daily; 25 confirmed gestational diabetes (GDM) cases; average hospital stay of 1.09 days</li>
+            <li>GDM rate is highest among vaginal deliveries with episiotomy (52.13%) and lowest among standard vaginal deliveries</li>
+            <li>Fetal macrosomia and elective C-section are the top drivers of GDM rate, ahead of cephalopelvic disproportion and unsuccessful induction</li>
+            <li>A healthy-habits pathway (diet/meals) traces clearly into delivery mode and diabetes outcomes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Medical History and Lifestyle Dashboard</h3>
+        </div>
+        <img src="assets/images/maternal-health/medical-history-lifestyle.png" alt="Power BI dashboard showing hypertension, tobacco, alcohol use, and diabetes treatment status" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Hypertension rate 4.04%, tobacco use 19.49%, alcohol use 16.91%, 9 confirmed diabetes patients</li>
+            <li>Asian participants report the highest smoking rate; Black participants report the highest alcohol use</li>
+            <li>A weak positive correlation exists between alcohol consumption and BMI</li>
+            <li>~73% of hypertensive patients never received treatment, vs. 27% treated — and most diabetes cases lack a documented diabetes gap, with diet/medicine split roughly evenly among treated cases</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Anthropometry and Pregnancy History Analysis</h3>
+        </div>
+        <img src="assets/images/maternal-health/anthropometry-pregnancy-history.png" alt="Power BI dashboard showing weight gain by trimester, miscarriage rate, and birth status by age group" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Average weight gain: 2.09kg (1st→2nd trimester), 6.46kg (2nd→3rd), 9.18kg (1st→3rd) — with a strong positive correlation between 1st and 3rd trimester weight</li>
+            <li>18.05% of patients have a prior miscarriage on record</li>
+            <li>Half of patients fall into the "Low Gain" weight category by 3rd trimester, ahead of "Healthy" (24%) and "High Gain" (12%)</li>
+            <li>Preterm births skew toward the 18–25 age group, while full-term births are more evenly distributed across age groups</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Lab Test and Vitals Analysis</h3>
+        </div>
+        <img src="assets/images/maternal-health/lab-test-vitals.png" alt="Power BI dashboard showing infectious disease screening rates and glucose levels by trimester" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Syphilis 5.15%, anaemia risk 13.97%, hepatitis 1.10%</li>
+            <li>GDM mothers show consistently higher glucose across all tests, with the widest gap at OGTT 1h</li>
+            <li>Fasting glucose exceeds diagnostic thresholds in ~20% of cases by the 2nd/3rd trimester, more than either OGTT measure</li>
+            <li>Fasting glucose is highest among 1st-trimester hypertensive patients and generally decreases by the 3rd trimester in normal-BP patients</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Predictive Drivers of Newborn Weight</h3>
+        </div>
+        <img src="assets/images/maternal-health/newborn-weight-drivers.png" alt="Power BI decomposition tree showing key inputs predicting newborn weight, led by systolic blood pressure" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Systolic blood pressure is the single strongest predictor of newborn weight (~21% impact), ahead of preperitoneal visceral fat (~19%) and subcutaneous fat (~14%)</li>
+            <li>Central adiposity measures (visceral + subcutaneous fat) combine for roughly one-third of total predictive impact</li>
+            <li>2nd-trimester fasting glucose (~12%) outweighs 1st (~5%) and 3rd trimester (~2%) readings, suggesting mid-pregnancy glucose control matters most</li>
+            <li>Early hematocrit and total fat measures contribute modestly; later-trimester measures are comparatively weak signals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__header">
+          <h3 class="project-card__title">Newborn and Ultrasound Dashboard</h3>
+        </div>
+        <img src="assets/images/maternal-health/newborn-ultrasound.png" alt="Power BI dashboard showing newborn weight, health status, gestational age, and fetal weight percentile" class="project-card__image" />
+        <div class="project-card__body">
+          <ul class="project-card__bullets">
+            <li>Average newborn weight 3.26kg (range 1.11–4.53kg); 169 newborns rated "Normal" health vs. 103 "At Risk"</li>
+            <li>26.84% of births fall below the low-birth-weight threshold; 12.87% involved newborn aspiration, 1.47% required intubation</li>
+            <li>Term births dominate the normal-weight category, while underweight and overweight outcomes skew toward preterm births</li>
+            <li>The fetal weight percentile distribution is concentrated around the 50th percentile, with smaller shares in extreme percentile bands</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2024 Pavishya Janakiraman &nbsp;·&nbsp; Built with HTML/CSS/JS &nbsp;·&nbsp; Hosted on Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
