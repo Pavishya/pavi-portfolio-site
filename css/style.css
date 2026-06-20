@@ -348,7 +348,7 @@ ul { list-style: none; }
 .projects { background: var(--bg-alt); }
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 .project-card {
@@ -646,10 +646,6 @@ ul { list-style: none; }
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .projects__grid { grid-template-columns: 1fr 1fr; }
-}
-
 @media (max-width: 768px) {
   .nav__links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0;
     background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 16px 24px 24px; gap: 20px; }
