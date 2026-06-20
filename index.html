@@ -115,6 +115,12 @@
           <div class="badges__cell">
             <img src="assets/images/badges/microsoft-ai-skills-fest-2026.png" alt="Microsoft AI Skills Fest 2026 badge" class="badges__item" />
           </div>
+          <div class="badges__cell">
+            <img src="assets/images/badges/aws-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge" class="badges__item" />
+          </div>
+          <div class="badges__cell">
+            <img src="assets/images/badges/istqb-certified.webp" alt="ISTQB Certified badge" class="badges__item" />
+          </div>
         </div>
       </div>
     </div>
@@ -287,6 +293,41 @@
           </div>
           <div class="project-card__footer">
             <a href="https://github.com/Pavishya/pavi-portfolio-projects/tree/main/project-3-data-quality-automation"
+               target="_blank" rel="noopener" class="btn btn--small btn--secondary">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__domain domain--health">Healthcare Payer / EDI</span>
+            <h3 class="project-card__title">EDI Claims Validation Framework</h3>
+            <p class="project-card__hook">
+              143-test pytest suite validating synthetic X12 834/837/835 EDI files —
+              enrollment, professional claims, and remittance advice — built to mirror
+              the EDI layer a healthcare payer test engineer validates around a claims
+              platform like Facets.
+            </p>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--qa">pytest</span>
+              <span class="tag tag--python">Python</span>
+              <span class="tag tag--other">X12 EDI</span>
+              <span class="tag tag--other">Claims Adjudication</span>
+              <span class="tag tag--qa">pytest-html</span>
+            </div>
+            <ul class="project-card__bullets">
+              <li>Custom stdlib-only X12 parser for 834 enrollment, 837 claims, 835 remittance</li>
+              <li>Seeded synthetic data generation for reproducible, idempotent test runs</li>
+              <li>Cross-file reconciliation: eligibility, claim-to-remittance, adjudication arithmetic</li>
+              <li>Negative-path tests prove validators detect malformed/orphaned claims</li>
+            </ul>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Pavishya/pavi-portfolio-projects/tree/main/project-4-edi-claims-validation"
                target="_blank" rel="noopener" class="btn btn--small btn--secondary">
               View on GitHub
             </a>
