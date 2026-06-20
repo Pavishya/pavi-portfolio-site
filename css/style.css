@@ -165,6 +165,13 @@ ul { list-style: none; }
   letter-spacing: 0.05em;
   margin-bottom: 20px;
 }
+.hero__domains {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
 .hero__tagline {
   font-size: 1rem;
   color: var(--text-muted);
